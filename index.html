@@ -10,151 +10,194 @@
             margin: 0;
             padding: 0;
         }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
-        }
-        .container {
-            max-width: 900px;
-            width: 100%;
-        }
-        h1 {
-            color: #58a6ff;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-        p.subtitle {
-            text-align: center;
-            color: #8b949e;
-            margin-bottom: 30px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: #161b22;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        }
-        th, td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #21262d;
-        }
-        th {
-            background-color: #21262d;
-            color: #f0f6fc;
-            font-weight: 600;
-        }
-        tr:hover {
-            background-color: #1c2128;
-        }
-        .badge-year {
-            background-color: #238636;
+            font-family: 'Amazon Ember', Arial, sans-serif;
+            background-color: #0f1721;
             color: #ffffff;
-            padding: 3px 8px;
-            border-radius: 12px;
-            font-size: 0.85em;
+            padding: 30px;
         }
-        .network {
-            color: #8b949e;
-            font-size: 0.9em;
+
+        header {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 26px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        /* Contenedor con desplazamiento horizontal de izquierda a derecha */
+        .carousel-container {
+            display: flex;
+            gap: 16px;
+            overflow-x: auto;
+            padding: 10px 5px 20px 5px;
+            scroll-behavior: smooth;
+        }
+
+        /* Personalización de la barra de desplazamiento */
+        .carousel-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .carousel-container::-webkit-scrollbar-thumb {
+            background: #1b2533;
+            border-radius: 4px;
+        }
+
+        .carousel-container::-webkit-scrollbar-thumb:hover {
+            background: #00a8e1;
+        }
+
+        /* Tarjeta de serie estilo Prime Video */
+        .card {
+            flex: 0 0 210px;
+            background-color: #1b2533;
+            border-radius: 6px;
+            overflow: hidden;
+            transition: transform 0.25s ease, border 0.25s ease, box-shadow 0.25s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            border: 2px solid #00a8e1;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+        }
+
+        .card img {
+            width: 100%;
+            height: 290px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card-info {
+            padding: 12px;
+        }
+
+        .card-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 6px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 12px;
+            color: #8197a4;
+        }
+
+        .badge {
+            background-color: #00a8e1;
+            color: #0f1721;
+            font-size: 10px;
+            font-weight: bold;
+            padding: 2px 5px;
+            border-radius: 3px;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Series Más Vistas en TV (2006 - 2013)</h1>
-        <p class="subtitle">Ranking de las producciones con mayor audiencia registrada durante ese periodo.</p>
+    <header>
+        <h1>Series Más Vistas (2006 - 2013)</h1>
+    </header>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Título de la Serie</th>
-                    <th>Cadena</th>
-                    <th>Audiencia Promedio</th>
-                    <th>Periodo de Emisión</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td><strong>American Idol</strong></td>
-                    <td class="network">FOX</td>
-                    <td>~30.0 Millones</td>
-                    <td><span class="badge-year">2002 - 2016</span></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td><strong>CSI: Crime Scene Investigation</strong></td>
-                    <td class="network">CBS</td>
-                    <td>~20.0 Millones</td>
-                    <td><span class="badge-year">2000 - 2015</span></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td><strong>Grey's Anatomy</strong></td>
-                    <td class="network">ABC</td>
-                    <td>~19.0 Millones</td>
-                    <td><span class="badge-year">2005 - Presente</span></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td><strong>House M.D.</strong></td>
-                    <td class="network">FOX</td>
-                    <td>~17.3 Millones</td>
-                    <td><span class="badge-year">2004 - 2012</span></td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td><strong>NCIS</strong></td>
-                    <td class="network">CBS</td>
-                    <td>~17.0 Millones</td>
-                    <td><span class="badge-year">2003 - Presente</span></td>
-                </tr>
-                <tr>
-                    <td>6</td>
-                    <td><strong>The Big Bang Theory</strong></td>
-                    <td class="network">CBS</td>
-                    <td>~15.5 Millones</td>
-                    <td><span class="badge-year">2007 - 2019</span></td>
-                </tr>
-                <tr>
-                    <td>7</td>
-                    <td><strong>Desperate Housewives</strong></td>
-                    <td class="network">ABC</td>
-                    <td>~14.5 Millones</td>
-                    <td><span class="badge-year">2004 - 2012</span></td>
-                </tr>
-                <tr>
-                    <td>8</td>
-                    <td><strong>Two and a Half Men</strong></td>
-                    <td class="network">CBS</td>
-                    <td>~13.8 Millones</td>
-                    <td><span class="badge-year">2003 - 2015</span></td>
-                </tr>
-                <tr>
-                    <td>9</td>
-                    <td><strong>Breaking Bad</strong></td>
-                    <td class="network">AMC</td>
-                    <td>~10.3 Millones (Final)</td>
-                    <td><span class="badge-year">2008 - 2013</span></td>
-                </tr>
-                <tr>
-                    <td>10</td>
-                    <td><strong>The Walking Dead</strong></td>
-                    <td class="network">AMC</td>
-                    <td>~10.0 Millones</td>
-                    <td><span class="badge-year">2010 - 2022</span></td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="carousel-container">
+
+        <!-- Serie 1 -->
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/M/MVBmM2MyZjg5NWUtNWU0OC00ODA3LTk1M2ItZDA3NjA1MmVkOWE1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Avatar The Last Airbender">
+            <div class="card-info">
+                <div class="card-title">Avatar: The Last Airbender</div>
+                <div class="card-meta">
+                    <span class="badge">TOP</span>
+                    <span>2005 - 2008</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Serie 2 -->
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/M/MVBMTUxNzg0MDM2Ml5BMl5BanBnXkFtZTcwMTgwODI1OQ@@._V1_FMjpg_UX1000_.jpg" alt="The Office">
+            <div class="card-info">
+                <div class="card-title">The Office</div>
+                <div class="card-meta">
+                    <span class="badge">TOP</span>
+                    <span>2005 - 2013</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Serie 3 -->
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/M/MVBMTI2MTA2NTExMV5BMl5BanBnXkFtZTcwOTY5NjAwMw@@._V1_FMjpg_UX1000_.jpg" alt="Supernatural">
+            <div class="card-info">
+                <div class="card-title">Supernatural</div>
+                <div class="card-meta">
+                    <span class="badge">TOP</span>
+                    <span>2005 - 2020</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Serie 4 -->
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/M/MVBMjE3NTcxNzE5N15BMl5BanBnXkFtZTgwMDUyMDIzNjE@._V1_FMjpg_UX1000_.jpg" alt="Dexter">
+            <div class="card-info">
+                <div class="card-title">Dexter</div>
+                <div class="card-meta">
+                    <span class="badge">TOP</span>
+                    <span>2006 - 2013</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Serie 5 -->
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/M/MVBY2U3M2I4YjAtOTU2NC00NzdjLTk3ZmUtYWNmZTdhODRjNmM4XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Breaking Bad">
+            <div class="card-info">
+                <div class="card-title">Breaking Bad</div>
+                <div class="card-meta">
+                    <span class="badge">TOP</span>
+                    <span>2008 - 2013</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Serie 6 -->
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/M/MVBMTk5MTAyODk1N15BMl5BanBnXkFtZTcwNDI2MDcxOQ@@._V1_FMjpg_UX1000_.jpg" alt="The Walking Dead">
+            <div class="card-info">
+                <div class="card-title">The Walking Dead</div>
+                <div class="card-meta">
+                    <span class="badge">TOP</span>
+                    <span>2010 - 2022</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Serie 7 -->
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/M/MVBN2EyNWNmMDgtNWJiNC00MDcxLWE1NWItOTI5MDEyM2M5YzA2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Game of Thrones">
+            <div class="card-info">
+                <div class="card-title">Game of Thrones</div>
+                <div class="card-meta">
+                    <span class="badge">TOP</span>
+                    <span>2011 - 2019</span>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 </body>
