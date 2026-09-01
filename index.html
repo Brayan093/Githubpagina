@@ -1,173 +1,55 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Series Más Vistas (2005 - 2013)</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
-        }
-        .container {
-            max-width: 900px;
-            width: 100%;
-        }
-        h1 {
-            color: #58a6ff;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-        p.subtitle {
-            text-align: center;
-            color: #8b949e;
-            margin-bottom: 30px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: #161b22;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        }
-        th, td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #21262d;
-            vertical-align: middle;
-        }
-        th {
-            background-color: #21262d;
-            color: #f0f6fc;
-            font-weight: 600;
-        }
-        tr:hover {
-            background-color: #1c2128;
-        }
-        .poster {
-            width: 80px;
-            height: auto;
-            border-radius: 6px;
-            display: block;
-        }
-        .badge-year {
-            background-color: #238636;
-            color: #ffffff;
-            padding: 3px 8px;
-            border-radius: 12px;
-            font-size: 0.85em;
-        }
-        .network {
-            color: #8b949e;
-            font-size: 0.9em;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <h1>Series Más Vistas en TV</h1>
-        <p class="subtitle">Ranking de producciones populares con imágenes y detalles.</p>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Imagen</th>
-                    <th>Título de la Serie</th>
-                    <th>Cadena</th>
-                    <th>Audiencia Promedio</th>
-                    <th>Periodo</th>
-                </tr>
-            </thead>
-            <tbody>
-           
-                <tr>
-                    <td>
-                        <img src="https://upload.wikimedia.org/wikipedia/en/8/86/Avatar_The_Last_Airbender_logo.svg" alt="Avatar: The Last Airbender" class="poster">
-                    </td>
-                    <td><strong>Avatar: The Last Airbender</strong></td>
-                    <td class="network">Nickelodeon</td>
-                    <td>~5.6 Millones</td>
-                    <td><span class="badge-year">2005 - 2008</span></td>
-                </tr>
-
-            
-                <tr>
-                    <td>
-                        <img src="images/the-office.jpg" alt="The Office" class="poster">
-                    </td>
-                    <td><strong>The Office</strong></td>
-                    <td class="network">NBC</td>
-                    <td>~8.7 Millones</td>
-                    <td><span class="badge-year">2005 - 2013</span></td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <img src="https://i.ebayimg.com/images/g/V7AAAOSw4e1mT-11/s-l1600.jpg" alt="Dexter" class="poster">
-                    </td>
-                    <td><strong>Dexter</strong></td>
-                    <td class="network">Showtime</td>
-                    <td>~6.2 Millones</td>
-                    <td><span class="badge-year">2006 - 2013</span></td>
-                </tr>
-
-           
-                <tr>
-                    <td>
-                        <img src="https://image.tmdb.org/t/p/original/u1cUGaJ3dE5G4K6t889J7xN613K.jpg" alt="Supernatural" class="poster">
-                    </td>
-                    <td><strong>Supernatural</strong></td>
-                    <td class="network">The WB / The CW</td>
-                    <td>~3.2 Millones</td>
-                    <td><span class="badge-year">2005 - 2020</span></td>
-                </tr>
-
-               
-                <tr>
-                    <td>
-                        <img src="https://image.tmdb.org/t/p/original/ztkUQFLRC19uMY53L3A3P3I3522.jpg" alt="Breaking Bad" class="poster">
-                    </td>
-                    <td><strong>Breaking Bad</strong></td>
-                    <td class="network">AMC</td>
-                    <td>~10.3 Millones</td>
-                    <td><span class="badge-year">2008 - 2013</span></td>
-                </tr>
-
-            
-                <tr>
-                    <td>
-                        <img src="https://image.tmdb.org/t/p/original/pq2ptkYbHh8TJW3yWStVJviErzE.jpg" alt="The Walking Dead" class="poster">
-                    </td>
-                    <td><strong>The Walking Dead</strong></td>
-                    <td class="network">AMC</td>
-                    <td>~14.4 Millones</td>
-                    <td><span class="badge-year">2010 - 2022</span></td>
-                </tr>
-
-          
-                <tr>
-                    <td>
-                        <img src="https://m.media-amazon.com/images/M/MVBMTM5MDM1MzI4OF5BMl5BanBnXkFtZTcwOTk2MjE4NA@@._V1_.jpg" alt="Game of Thrones" class="poster">
-                    </td>
-                    <td><strong>Game of Thrones</strong></td>
-                    <td class="network">HBO</td>
-                    <td>~11.9 Millones</td>
-                    <td><span class="badge-year">2011 - 2019</span></td>
-                </tr>
-            </tbody>
-        </table>
+<div class="grid">
+    <!-- Avatar -->
+    <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/8/86/Avatar_The_Last_Airbender_logo.svg" alt="Avatar: The Last Airbender">
+        <div class="card-content">
+            <h3>Avatar: The Last Airbender</h3>
+            <span class="badge">TOP</span> <span class="year">2005 - 2008</span>
+        </div>
     </div>
 
-</body>
-</html>
+    <!-- The Office -->
+    <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/en/5/51/The_Office_US_logo.svg" alt="The Office">
+        <div class="card-content">
+            <h3>The Office</h3>
+            <span class="badge">TOP</span> <span class="year">2005 - 2013</span>
+        </div>
+    </div>
+
+    <!-- Supernatural -->
+    <div class="card">
+        <img src="https://image.tmdb.org/t/p/w500/u1cUGaJ3dE5G4K6t889J7xN613K.jpg" alt="Supernatural">
+        <div class="card-content">
+            <h3>Supernatural</h3>
+            <span class="badge">TOP</span> <span class="year">2005 - 2020</span>
+        </div>
+    </div>
+
+    <!-- Dexter -->
+    <div class="card">
+        <img src="https://image.tmdb.org/t/p/w500/58AV12A2O3i2C4I53K2O5l2k1eD.jpg" alt="Dexter">
+        <div class="card-content">
+            <h3>Dexter</h3>
+            <span class="badge">TOP</span> <span class="year">2006 - 2013</span>
+        </div>
+    </div>
+
+    <!-- Breaking Bad -->
+    <div class="card">
+        <img src="https://image.tmdb.org/t/p/w500/ztkUQFLRC19uMY53L3A3P3I3522.jpg" alt="Breaking Bad">
+        <div class="card-content">
+            <h3>Breaking Bad</h3>
+            <span class="badge">TOP</span> <span class="year">2008 - 2013</span>
+        </div>
+    </div>
+
+    <!-- The Walking Dead -->
+    <div class="card">
+        <img src="https://image.tmdb.org/t/p/w500/pq2ptkYbHh8TJW3yWStVJviErzE.jpg" alt="The Walking Dead">
+        <div class="card-content">
+            <h3>The Walking Dead</h3>
+            <span class="badge">TOP</span> <span class="year">2010 - 2022</span>
+        </div>
+    </div>
+</div>
