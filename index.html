@@ -5,101 +5,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Series Más Vistas (2006 - 2013)</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #0f172a;
-            color: #f8fafc;
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-        }
-        h1 {
-            color: #38bdf8;
-            text-align: center;
-        }
-        .intro {
-            text-align: center;
-            color: #94a3b8;
-            margin-bottom: 30px;
-        }
-        ul {
-            list-style: none;
+        * {
+            box-sizing: border-box;
+            margin: 0;
             padding: 0;
         }
-        li {
-            background-color: #1e293b;
-            margin-bottom: 12px;
-            padding: 16px 20px;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+        h1 {
+            color: #58a6ff;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        p.subtitle {
+            text-align: center;
+            color: #8b949e;
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #161b22;
             border-radius: 8px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
-        .info {
-            display: flex;
-            flex-direction: column;
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #21262d;
         }
-        .title {
-            font-weight: bold;
-            font-size: 1.1em;
-            color: #f1f5f9;
+        th {
+            background-color: #21262d;
+            color: #f0f6fc;
+            font-weight: 600;
         }
-        .genre {
+        tr:hover {
+            background-color: #1c2128;
+        }
+        .badge-year {
+            background-color: #238636;
+            color: #ffffff;
+            padding: 3px 8px;
+            border-radius: 12px;
             font-size: 0.85em;
-            color: #94a3b8;
         }
-        .years {
-            background-color: #0284c7;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 0.85em;
-            font-weight: bold;
+        .network {
+            color: #8b949e;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
 
-    <h1>Top Series Iconicas (2006 - 2013)</h1>
-    <p class="intro">Las producciones de televisión más populares e influyentes emitidas en este periodo.</p>
+    <div class="container">
+        <h1>Series Más Vistas en TV (2006 - 2013)</h1>
+        <p class="subtitle">Ranking de las producciones con mayor audiencia registrada durante ese periodo.</p>
 
-    <ul>
-        <li>
-            <div class="info">
-                <span class="title">House M.D.</span>
-                <span class="genre">Drama médico / Misterio</span>
-            </div>
-            <span class="years">2004 - 2012</span>
-        </li>
-        <li>
-            <div class="info">
-                <span class="title">The Big Bang Theory</span>
-                <span class="genre">Comedia</span>
-            </div>
-            <span class="years">2007 - 2019</span>
-        </li>
-        <li>
-            <div class="info">
-                <span class="title">Breaking Bad</span>
-                <span class="genre">Drama / Crimen</span>
-            </div>
-            <span class="years">2008 - 2013</span>
-        </li>
-        <li>
-            <div class="info">
-                <span class="title">The Walking Dead</span>
-                <span class="genre">Terror / Drama postapocalíptico</span>
-            </div>
-            <span class="years">2010 - 2022</span>
-        </li>
-        <li>
-            <div class="info">
-                <span class="title">Game of Thrones</span>
-                <span class="genre">Fantasía / Drama</span>
-            </div>
-            <span class="years">2011 - 2019</span>
-        </li>
-    </ul>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Título de la Serie</th>
+                    <th>Cadena</th>
+                    <th>Audiencia Promedio</th>
+                    <th>Periodo de Emisión</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><strong>American Idol</strong></td>
+                    <td class="network">FOX</td>
+                    <td>~30.0 Millones</td>
+                    <td><span class="badge-year">2002 - 2016</span></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><strong>CSI: Crime Scene Investigation</strong></td>
+                    <td class="network">CBS</td>
+                    <td>~20.0 Millones</td>
+                    <td><span class="badge-year">2000 - 2015</span></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><strong>Grey's Anatomy</strong></td>
+                    <td class="network">ABC</td>
+                    <td>~19.0 Millones</td>
+                    <td><span class="badge-year">2005 - Presente</span></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><strong>House M.D.</strong></td>
+                    <td class="network">FOX</td>
+                    <td>~17.3 Millones</td>
+                    <td><span class="badge-year">2004 - 2012</span></td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td><strong>NCIS</strong></td>
+                    <td class="network">CBS</td>
+                    <td>~17.0 Millones</td>
+                    <td><span class="badge-year">2003 - Presente</span></td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td><strong>The Big Bang Theory</strong></td>
+                    <td class="network">CBS</td>
+                    <td>~15.5 Millones</td>
+                    <td><span class="badge-year">2007 - 2019</span></td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td><strong>Desperate Housewives</strong></td>
+                    <td class="network">ABC</td>
+                    <td>~14.5 Millones</td>
+                    <td><span class="badge-year">2004 - 2012</span></td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td><strong>Two and a Half Men</strong></td>
+                    <td class="network">CBS</td>
+                    <td>~13.8 Millones</td>
+                    <td><span class="badge-year">2003 - 2015</span></td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td><strong>Breaking Bad</strong></td>
+                    <td class="network">AMC</td>
+                    <td>~10.3 Millones (Final)</td>
+                    <td><span class="badge-year">2008 - 2013</span></td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td><strong>The Walking Dead</strong></td>
+                    <td class="network">AMC</td>
+                    <td>~10.0 Millones</td>
+                    <td><span class="badge-year">2010 - 2022</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
 </body>
 </html>
