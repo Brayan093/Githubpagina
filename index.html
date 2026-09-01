@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Series Más Vistas (2005 - 2013)</title>
+    <title>Series Más Vistas</title>
     <style>
         * {
             box-sizing: border-box;
@@ -11,163 +11,97 @@
             padding: 0;
         }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Arial, sans-serif;
             background-color: #0d1117;
-            color: #c9d1d9;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
-        }
-        .container {
-            max-width: 900px;
-            width: 100%;
+            color: #ffffff;
+            padding: 20px;
         }
         h1 {
+            text-align: center;
+            margin-bottom: 25px;
             color: #58a6ff;
-            margin-bottom: 10px;
-            text-align: center;
         }
-        p.subtitle {
-            text-align: center;
-            color: #8b949e;
-            margin-bottom: 30px;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
+        .card {
             background-color: #161b22;
             border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        }
-        th, td {
             padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #21262d;
-            vertical-align: middle;
+            border: 1px solid #30363d;
+            text-align: center;
         }
-        th {
-            background-color: #21262d;
-            color: #f0f6fc;
-            font-weight: 600;
-        }
-        tr:hover {
-            background-color: #1c2128;
-        }
-        .poster {
-            width: 80px;
-            height: auto;
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: contain;
+            background-color: #010409;
             border-radius: 6px;
-            display: block;
+            margin-bottom: 12px;
         }
-        .badge-year {
+        .card h3 {
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+        .badge {
             background-color: #238636;
-            color: #ffffff;
-            padding: 3px 8px;
-            border-radius: 12px;
-            font-size: 0.85em;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: bold;
         }
-        .network {
+        .year {
             color: #8b949e;
-            font-size: 0.9em;
+            font-size: 0.85em;
+            margin-left: 5px;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Series Más Vistas en TV</h1>
-        <p class="subtitle">Ranking de producciones populares con imágenes y detalles.</p>
+    <h1>Series Más Vistas (2006 - 2013)</h1>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Imagen</th>
-                    <th>Título de la Serie</th>
-                    <th>Cadena</th>
-                    <th>Audiencia Promedio</th>
-                    <th>Periodo</th>
-                </tr>
-            </thead>
-            <tbody>
-                <!-- Avatar: The Last Airbender -->
-                <tr>
-                    <td>
-                        <img src="https://upload.wikimedia.org/wikipedia/en/8/86/Avatar_The_Last_Airbender_logo.svg" alt="Avatar: The Last Airbender" class="poster">
-                    </td>
-                    <td><strong>Avatar: The Last Airbender</strong></td>
-                    <td class="network">Nickelodeon</td>
-                    <td>~5.6 Millones</td>
-                    <td><span class="badge-year">2005 - 2008</span></td>
-                </tr>
+    <div class="grid">
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/en/8/86/Avatar_The_Last_Airbender_logo.svg" alt="Avatar">
+            <h3>Avatar: The Last Airbender</h3>
+            <div><span class="badge">TOP</span><span class="year">2005 - 2008</span></div>
+        </div>
 
-                <!-- The Office -->
-                <tr>
-                    <td>
-                        <img src="images/the-office.jpg" alt="The Office" class="poster">
-                    </td>
-                    <td><strong>The Office</strong></td>
-                    <td class="network">NBC</td>
-                    <td>~8.7 Millones</td>
-                    <td><span class="badge-year">2005 - 2013</span></td>
-                </tr>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/The_Office_US_logo.svg" alt="The Office">
+            <h3>The Office</h3>
+            <div><span class="badge">TOP</span><span class="year">2005 - 2013</span></div>
+        </div>
 
-                <!-- Dexter -->
-                <tr>
-                    <td>
-                        <img src="https://i.ebayimg.com/images/g/V7AAAOSw4e1mT-11/s-l1600.jpg" alt="Dexter" class="poster">
-                    </td>
-                    <td><strong>Dexter</strong></td>
-                    <td class="network">Showtime</td>
-                    <td>~6.2 Millones</td>
-                    <td><span class="badge-year">2006 - 2013</span></td>
-                </tr>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Supernatural_logo.svg" alt="Supernatural">
+            <h3>Supernatural</h3>
+            <div><span class="badge">TOP</span><span class="year">2005 - 2020</span></div>
+        </div>
 
-                <!-- Supernatural -->
-                <tr>
-                    <td>
-                        <img src="https://image.tmdb.org/t/p/original/u1cUGaJ3dE5G4K6t889J7xN613K.jpg" alt="Supernatural" class="poster">
-                    </td>
-                    <td><strong>Supernatural</strong></td>
-                    <td class="network">The WB / The CW</td>
-                    <td>~3.2 Millones</td>
-                    <td><span class="badge-year">2005 - 2020</span></td>
-                </tr>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Dexter_logo.svg" alt="Dexter">
+            <h3>Dexter</h3>
+            <div><span class="badge">TOP</span><span class="year">2006 - 2013</span></div>
+        </div>
 
-                <!-- Breaking Bad -->
-                <tr>
-                    <td>
-                        <img src="https://image.tmdb.org/t/p/original/ztkUQFLRC19uMY53L3A3P3I3522.jpg" alt="Breaking Bad" class="poster">
-                    </td>
-                    <td><strong>Breaking Bad</strong></td>
-                    <td class="network">AMC</td>
-                    <td>~10.3 Millones</td>
-                    <td><span class="badge-year">2008 - 2013</span></td>
-                </tr>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Breaking_Bad_logo.svg" alt="Breaking Bad">
+            <h3>Breaking Bad</h3>
+            <div><span class="badge">TOP</span><span class="year">2008 - 2013</span></div>
+        </div>
 
-                <!-- The Walking Dead -->
-                <tr>
-                    <td>
-                        <img src="https://image.tmdb.org/t/p/original/pq2ptkYbHh8TJW3yWStVJviErzE.jpg" alt="The Walking Dead" class="poster">
-                    </td>
-                    <td><strong>The Walking Dead</strong></td>
-                    <td class="network">AMC</td>
-                    <td>~14.4 Millones</td>
-                    <td><span class="badge-year">2010 - 2022</span></td>
-                </tr>
-
-                <!-- Game of Thrones -->
-                <tr>
-                    <td>
-                        <img src="https://m.media-amazon.com/images/M/MVBMTM5MDM1MzI4OF5BMl5BanBnXkFtZTcwOTk2MjE4NA@@._V1_.jpg" alt="Game of Thrones" class="poster">
-                    </td>
-                    <td><strong>Game of Thrones</strong></td>
-                    <td class="network">HBO</td>
-                    <td>~11.9 Millones</td>
-                    <td><span class="badge-year">2011 - 2019</span></td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/The_Walking_Dead_logo.svg" alt="The Walking Dead">
+            <h3>The Walking Dead</h3>
+            <div><span class="badge">TOP</span><span class="year">2010 - 2022</span></div>
+        </div>
     </div>
 
 </body>
