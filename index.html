@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Series Más Vistas</title>
+    <title>Series Más Vistas (2006 - 2013)</title>
     <style>
         * {
             box-sizing: border-box;
@@ -14,43 +14,71 @@
             font-family: Arial, sans-serif;
             background-color: #0d1117;
             color: #ffffff;
-            padding: 20px;
+            padding: 40px 20px;
         }
         h1 {
             text-align: center;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             color: #58a6ff;
         }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        
+        /* Contenedor del carrusel deslizable horizontalmente */
+        .carousel-container {
+            display: flex;
             gap: 20px;
-            max-width: 1100px;
-            margin: 0 auto;
+            overflow-x: auto;
+            padding: 10px 10px 25px 10px;
+            scroll-behavior: smooth;
         }
+
+        /* Estilo personalizado para la barra de desplazamiento horizontal */
+        .carousel-container::-webkit-scrollbar {
+            height: 10px;
+        }
+        .carousel-container::-webkit-scrollbar-track {
+            background: #161b22;
+            border-radius: 8px;
+        }
+        .carousel-container::-webkit-scrollbar-thumb {
+            background: #30363d;
+            border-radius: 8px;
+        }
+        .carousel-container::-webkit-scrollbar-thumb:hover {
+            background: #58a6ff;
+        }
+
+        /* Tarjeta individual */
         .card {
+            flex: 0 0 220px; /* Mantiene un ancho fijo para que la lista deslice */
             background-color: #161b22;
             border-radius: 8px;
             padding: 15px;
             border: 1px solid #30363d;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .card img {
             width: 100%;
-            height: 250px;
-            object-fit: contain;
-            background-color: #010409;
+            height: 300px;
+            object-fit: cover;
             border-radius: 6px;
             margin-bottom: 12px;
+            background-color: #010409;
         }
         .card h3 {
-            font-size: 1.1em;
-            margin-bottom: 8px;
+            font-size: 1.05em;
+            margin-bottom: 10px;
+            color: #f0f6fc;
+        }
+        .meta {
+            margin-top: auto;
         }
         .badge {
             background-color: #238636;
             color: white;
-            padding: 2px 6px;
+            padding: 3px 7px;
             border-radius: 4px;
             font-size: 0.8em;
             font-weight: bold;
@@ -58,7 +86,7 @@
         .year {
             color: #8b949e;
             font-size: 0.85em;
-            margin-left: 5px;
+            margin-left: 6px;
         }
     </style>
 </head>
@@ -66,41 +94,54 @@
 
     <h1>Series Más Vistas (2006 - 2013)</h1>
 
-    <div class="grid">
+    <div class="carousel-container">
+        <!-- 1. Avatar: The Last Airbender -->
         <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/en/8/86/Avatar_The_Last_Airbender_logo.svg" alt="Avatar">
+            <img src="https://upload.wikimedia.org/wikipedia/en/8/86/Avatar_The_Last_Airbender_logo.svg" alt="Avatar: The Last Airbender">
             <h3>Avatar: The Last Airbender</h3>
-            <div><span class="badge">TOP</span><span class="year">2005 - 2008</span></div>
+            <div class="meta"><span class="badge">TOP</span><span class="year">2005 - 2008</span></div>
         </div>
 
+        <!-- 2. The Office -->
         <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/The_Office_US_logo.svg" alt="The Office">
+            <img src="https://image.tmdb.org/t/p/w500/7AdGwpatVAVxZioCh62vR8NJuv1.jpg" alt="The Office">
             <h3>The Office</h3>
-            <div><span class="badge">TOP</span><span class="year">2005 - 2013</span></div>
+            <div class="meta"><span class="badge">TOP</span><span class="year">2005 - 2013</span></div>
         </div>
 
+        <!-- 3. Dexter -->
         <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Supernatural_logo.svg" alt="Supernatural">
-            <h3>Supernatural</h3>
-            <div><span class="badge">TOP</span><span class="year">2005 - 2020</span></div>
-        </div>
-
-        <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Dexter_logo.svg" alt="Dexter">
+            <img src="https://image.tmdb.org/t/p/w500/58AV12A2O3i2C4I53K2O5l2k1eD.jpg" alt="Dexter">
             <h3>Dexter</h3>
-            <div><span class="badge">TOP</span><span class="year">2006 - 2013</span></div>
+            <div class="meta"><span class="badge">TOP</span><span class="year">2006 - 2013</span></div>
         </div>
 
+        <!-- 4. Supernatural -->
         <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Breaking_Bad_logo.svg" alt="Breaking Bad">
+            <img src="https://image.tmdb.org/t/p/w500/u1cUGaJ3dE5G4K6t889J7xN613K.jpg" alt="Supernatural">
+            <h3>Supernatural</h3>
+            <div class="meta"><span class="badge">TOP</span><span class="year">2005 - 2020</span></div>
+        </div>
+
+        <!-- 5. Breaking Bad -->
+        <div class="card">
+            <img src="https://image.tmdb.org/t/p/w500/ztkUQFLRC19uMY53L3A3P3I3522.jpg" alt="Breaking Bad">
             <h3>Breaking Bad</h3>
-            <div><span class="badge">TOP</span><span class="year">2008 - 2013</span></div>
+            <div class="meta"><span class="badge">TOP</span><span class="year">2008 - 2013</span></div>
         </div>
 
+        <!-- 6. The Walking Dead -->
         <div class="card">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ef/The_Walking_Dead_logo.svg" alt="The Walking Dead">
+            <img src="https://image.tmdb.org/t/p/w500/pq2ptkYbHh8TJW3yWStVJviErzE.jpg" alt="The Walking Dead">
             <h3>The Walking Dead</h3>
-            <div><span class="badge">TOP</span><span class="year">2010 - 2022</span></div>
+            <div class="meta"><span class="badge">TOP</span><span class="year">2010 - 2022</span></div>
+        </div>
+
+        <!-- 7. Game of Thrones -->
+        <div class="card">
+            <img src="https://image.tmdb.org/t/p/w500/1XS1oqL89vEDgPtOVgJGjEhi2ns.jpg" alt="Game of Thrones">
+            <h3>Game of Thrones</h3>
+            <div class="meta"><span class="badge">TOP</span><span class="year">2011 - 2019</span></div>
         </div>
     </div>
 
