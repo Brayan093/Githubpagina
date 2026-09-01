@@ -3,200 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Series Más Vistas (2006 - 2013)</title>
+    <title>Series Más Vistas (2005 - 2013)</title>
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
-
         body {
-            font-family: 'Amazon Ember', Arial, sans-serif;
-            background-color: #0f1721;
-            color: #ffffff;
-            padding: 30px;
-        }
-
-        header {
-            margin-bottom: 20px;
-        }
-
-        h1 {
-            color: #ffffff;
-            font-size: 26px;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-
-        /*  izquierda a derecha */
-        .carousel-container {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0d1117;
+            color: #c9d1d9;
+            padding: 40px 20px;
             display: flex;
-            gap: 16px;
-            overflow-x: auto;
-            padding: 10px 5px 20px 5px;
-            scroll-behavior: smooth;
+            justify-content: center;
         }
-
-        /* barra de desplazamiento */
-        .carousel-container::-webkit-scrollbar {
-            height: 8px;
-        }
-
-        .carousel-container::-webkit-scrollbar-thumb {
-            background: #1b2533;
-            border-radius: 4px;
-        }
-
-        .carousel-container::-webkit-scrollbar-thumb:hover {
-            background: #00a8e1;
-        }
-
-        .card {
-            flex: 0 0 210px;
-            background-color: #1b2533;
-            border-radius: 6px;
-            overflow: hidden;
-            transition: transform 0.25s ease, border 0.25s ease, box-shadow 0.25s ease;
-            cursor: pointer;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-            border: 2px solid #00a8e1;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
-        }
-
-        .card img {
+        .container {
+            max-width: 900px;
             width: 100%;
-            height: 290px;
-            object-fit: cover;
+        }
+        h1 {
+            color: #58a6ff;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        p.subtitle {
+            text-align: center;
+            color: #8b949e;
+            margin-bottom: 30px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #161b22;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #21262d;
+            vertical-align: middle;
+        }
+        th {
+            background-color: #21262d;
+            color: #f0f6fc;
+            font-weight: 600;
+        }
+        tr:hover {
+            background-color: #1c2128;
+        }
+        .poster {
+            width: 80px;
+            height: auto;
+            border-radius: 6px;
             display: block;
         }
-
-        .card-info {
-            padding: 12px;
+        .badge-year {
+            background-color: #238636;
+            color: #ffffff;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.85em;
         }
-
-        .card-title {
-            font-size: 14px;
-            font-weight: bold;
-            margin-bottom: 6px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .card-meta {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 12px;
-            color: #8197a4;
-        }
-
-        .badge {
-            background-color: #00a8e1;
-            color: #0f1721;
-            font-size: 10px;
-            font-weight: bold;
-            padding: 2px 5px;
-            border-radius: 3px;
+        .network {
+            color: #8b949e;
+            font-size: 0.9em;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Series Más Vistas (2006 - 2013)</h1>
-    </header>
+    <div class="container">
+        <h1>Series Más Vistas en TV</h1>
+        <p class="subtitle">Ranking de producciones populares con imágenes y detalles.</p>
 
-    <div class="carousel-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Título de la Serie</th>
+                    <th>Cadena</th>
+                    <th>Audiencia Promedio</th>
+                    <th>Periodo</th>
+                </tr>
+            </thead>
+            <tbody>
+           
+                <tr>
+                    <td>
+                        <img src="https://upload.wikimedia.org/wikipedia/en/8/86/Avatar_The_Last_Airbender_logo.svg" alt="Avatar: The Last Airbender" class="poster">
+                    </td>
+                    <td><strong>Avatar: The Last Airbender</strong></td>
+                    <td class="network">Nickelodeon</td>
+                    <td>~5.6 Millones</td>
+                    <td><span class="badge-year">2005 - 2008</span></td>
+                </tr>
 
-        <!-- Serie 1 -->
-        <div class="card">
-         <img src="https://static.tvtropes.org/pmwiki/pub/images/avatar_the_last_airbender.png" alt="Avatar: La leyenda de Aang" width="200">
-            <div class="card-info">
-                <div class="card-title">Avatar: The Last Airbender</div>
-                <div class="card-meta">
-                    <span class="badge">TOP</span>
-                    <span>2005 - 2008</span>
-                </div>
-            </div>
-        </div>
+            
+                <tr>
+                    <td>
+                        <img src="images/the-office.jpg" alt="The Office" class="poster">
+                    </td>
+                    <td><strong>The Office</strong></td>
+                    <td class="network">NBC</td>
+                    <td>~8.7 Millones</td>
+                    <td><span class="badge-year">2005 - 2013</span></td>
+                </tr>
 
-        <!-- Serie 2 -->
-        <div class="card">
-         <img src="images/foto.png" alt="Texto alternativo" width="500">
-            <div class="card-info">
-                <div class="card-title">The Office</div>
-                <div class="card-meta">
-                    <span class="badge">TOP</span>
-                    <span>2005 - 2013</span>
-                </div>
-            </div>
-        </div>
+                <tr>
+                    <td>
+                        <img src="https://i.ebayimg.com/images/g/V7AAAOSw4e1mT-11/s-l1600.jpg" alt="Dexter" class="poster">
+                    </td>
+                    <td><strong>Dexter</strong></td>
+                    <td class="network">Showtime</td>
+                    <td>~6.2 Millones</td>
+                    <td><span class="badge-year">2006 - 2013</span></td>
+                </tr>
 
-        <!-- Serie 3 -->
-        <div class="card">
-          <img src="https://image.tmdb.org/t/p/original/u1cUGaJ3dE5G4K6t889J7xN613K.jpg" width="300" alt="Supernatural Poster">
-            <div class="card-info">
-                <div class="card-title">Supernatural</div>
-                <div class="card-meta">
-                    <span class="badge">TOP</span>
-                    <span>2005 - 2020</span>
-                </div>
-            </div>
-        </div>
+           
+                <tr>
+                    <td>
+                        <img src="https://image.tmdb.org/t/p/original/u1cUGaJ3dE5G4K6t889J7xN613K.jpg" alt="Supernatural" class="poster">
+                    </td>
+                    <td><strong>Supernatural</strong></td>
+                    <td class="network">The WB / The CW</td>
+                    <td>~3.2 Millones</td>
+                    <td><span class="badge-year">2005 - 2020</span></td>
+                </tr>
 
-        <!-- Serie 4 -->
-        <div class="card">
-           <img src="https://i.ebayimg.com/images/g/V7AAAOSw4e1mT-11/s-l1600.jpg" alt="Dexter Poster" width="300"/>
-            <div class="card-info">
-                <div class="card-title">Dexter</div>
-                <div class="card-meta">
-                    <span class="badge">TOP</span>
-                    <span>2006 - 2013</span>
-                </div>
-            </div>
-        </div>
+               
+                <tr>
+                    <td>
+                        <img src="https://image.tmdb.org/t/p/original/ztkUQFLRC19uMY53L3A3P3I3522.jpg" alt="Breaking Bad" class="poster">
+                    </td>
+                    <td><strong>Breaking Bad</strong></td>
+                    <td class="network">AMC</td>
+                    <td>~10.3 Millones</td>
+                    <td><span class="badge-year">2008 - 2013</span></td>
+                </tr>
 
-        <!-- Serie 5 -->
-        <div class="card">
-           <img src="https://www.rottentomatoes.com/assets/pizza-slice/images/lead-v2.png" alt="Breaking Bad Poster">
-            <div class="card-info">
-                <div class="card-title">Breaking Bad</div>
-                <div class="card-meta">
-                    <span class="badge">TOP</span>
-                    <span>2008 - 2013</span>
-                </div>
-            </div>
-        </div>
+            
+                <tr>
+                    <td>
+                        <img src="https://image.tmdb.org/t/p/original/pq2ptkYbHh8TJW3yWStVJviErzE.jpg" alt="The Walking Dead" class="poster">
+                    </td>
+                    <td><strong>The Walking Dead</strong></td>
+                    <td class="network">AMC</td>
+                    <td>~14.4 Millones</td>
+                    <td><span class="badge-year">2010 - 2022</span></td>
+                </tr>
 
-        <!-- Serie 6 -->
-        <div class="card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTLqDqV5Gk_F1D4v4sBv5_d7p9S47dM7_v" alt="Poster The Walking Dead">
-            <div class="card-info">
-                <div class="card-title">The Walking Dead</div>
-                <div class="card-meta">
-                    <span class="badge">TOP</span>
-                    <span>2010 - 2022</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Serie 7 -->
-        <div class="card">
-          <img src="https://m.media-amazon.com/images/M/MVBMTM5MDM1MzI4OF5BMl5BanBnXkFtZTcwOTk2MjE4NA@@._V1_.jpg" alt="Game of Thrones" width="400">
-            <div class="card-info">
-                <div class="card-title">Game of Thrones</div>
-                <div class="card-meta">
-                    <span class="badge">TOP</span>
-                    <span>2011 - 2019</span>
-                </div>
-            </div>
-        </div>
-
+          
+                <tr>
+                    <td>
+                        <img src="https://m.media-amazon.com/images/M/MVBMTM5MDM1MzI4OF5BMl5BanBnXkFtZTcwOTk2MjE4NA@@._V1_.jpg" alt="Game of Thrones" class="poster">
+                    </td>
+                    <td><strong>Game of Thrones</strong></td>
+                    <td class="network">HBO</td>
+                    <td>~11.9 Millones</td>
+                    <td><span class="badge-year">2011 - 2019</span></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 
 </body>
